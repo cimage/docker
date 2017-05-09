@@ -1,0 +1,25 @@
+version: "3"
+services:
+    php71:
+        image: cimage/php71-apache:latest
+        #build: .
+        ports:
+            - "8071:80"
+        volumes:
+            - ./:/var/www/html/
+    # php70:
+    #     image: php:7.0
+    #     build: .
+    #     ports:
+    #         - "8070:80"
+    #     volumes:
+    #         - .:/var/www/html
+    # php56:
+    #     image: php:5.6
+    #     build: .
+    #     ports:
+    #         - "8056:80"
+    #     volumes:
+    #         - .:/var/www/html
+  #redis:
+    #image: "redis:alpine"
