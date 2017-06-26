@@ -7,19 +7,17 @@ services:
             - "8071:80"
         volumes:
             - ./:/var/www/html/
-    # php70:
-    #     image: php:7.0
-    #     build: .
-    #     ports:
-    #         - "8070:80"
-    #     volumes:
-    #         - .:/var/www/html
-    # php56:
-    #     image: php:5.6
-    #     build: .
-    #     ports:
-    #         - "8056:80"
-    #     volumes:
-    #         - .:/var/www/html
-  #redis:
-    #image: "redis:alpine"
+    php70:
+        image: cimage/php70-apache:latest
+        #build: .
+        ports:
+            - "8070:80"
+        volumes:
+            - .:/var/www/html
+    php56:
+        image: cimage/php56-apache:latest
+        #build: .
+        ports:
+            - "8056:80"
+        volumes:
+            - .:/var/www/html
